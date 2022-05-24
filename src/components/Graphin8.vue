@@ -45,6 +45,14 @@ export default {
   },
   methods: {
     graphinInit() {
+      // https://antv-g6.gitee.io/zh/docs/manual/tutorial/plugins#minimap
+      // 实例化 minimap 插件
+      const minimap = new G6.Minimap({
+        size: [100, 100],
+        className: 'minimap',
+        type: 'delegate',
+      });
+      const grid = new G6.Grid();
       this.G6Instance = new G6.Graph({
         container: 'graphin',
         width: 800,
@@ -60,8 +68,29 @@ export default {
         },
         modes: {
           // 支持的behavior
-          default: ['drag-canvas', 'zoom-canvas', 'drag-node'],
+          default: [
+            'drag-canvas',
+            'zoom-canvas',
+            'drag-node',
+            {
+              type: 'tooltip', // 提示框
+              formatText(model) {
+                // 提示框文本内容
+                const text = 'label:' + model.label + '<br/> class:' + model.class;
+                return text;
+              }
+            },
+            {
+              type: 'edge-tooltip', // 边提示框
+              formatText(model) {
+                // 边提示框文本内容
+                const text = 'source:' + model.source + '<br/> target:' + model.target + '<br/> weight:' + model.weight;
+                return text;
+              }
+            }
+          ],
           edit: ['click-select'],
+
         },
         // 节点在默认状态下的样式配置（style）和其他配置
         defaultNode: {
@@ -107,7 +136,8 @@ export default {
           click: {
             stroke: 'steelblue',
           }
-        }
+        },
+        plugins: [minimap, grid], // 将 minimap 实例配置到图上
       });
 
       // 鼠标进入节点
@@ -194,5 +224,18 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+#graphin {
+  position: relative;
+}
+/* 提示框的样式 */
+.g6-tooltip {
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #545454;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 8px;
+  box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+}
 </style>
