@@ -2,143 +2,120 @@
     "nodes": [
         {
             "id": "0",
-            "label": "n0",
+            "label": "this is \n main point",
             "class": "c0",
-            "x": 1000,
-            "y": -100
+            "size": 60,
+            "style": {
+                "fill": "#ffffff",
+                "stroke": "#ABB8D0",
+                "lineWidth": 2
+            },
+            "labelCfg": {
+                "position": "center",
+                "offset": 10,
+                "style": {
+                    "fill": "#323233",
+                    "stroke": "#323233",
+                    "fontFamily": "PingFangSC-Medium",
+                    "lineWidth": 0.2,
+                    "fontSize": 12
+                }
+            }
         },
         {
             "id": "1",
             "label": "n1",
-            "class": "c0",
-            "x": 300,
-            "y": -10
+            "class": "c0"
         },
         {
             "id": "2",
             "label": "n2",
-            "class": "c0",
-            "x": 10,
-            "y": 10
+            "class": "c0"
         },
         {
             "id": "3",
             "label": "n3",
-            "class": "c0",
-            "x": 320,
-            "y": -100
+            "class": "c0"
         },
         {
             "id": "4",
             "label": "n4",
-            "class": "c0",
-            "x": 100,
-            "y": 900
+            "class": "c0"
         },
         {
             "id": "5",
             "label": "n5",
-            "class": "c0",
-            "x": 120,
-            "y": 213
+            "class": "c0"
         },
         {
             "id": "6",
             "label": "n6",
-            "class": "c1",
-            "x": 543,
-            "y": 12
+            "class": "c1"
         },
         {
             "id": "7",
             "label": "n7",
-            "class": "c1",
-            "x": 543,
-            "y": -100
+            "class": "c1"
         },
         {
             "id": "8",
             "label": "n8",
-            "class": "c1",
-            "x": 1,
-            "y": 0
+            "class": "c1"
         },
         {
             "id": "9",
             "label": "n9",
-            "class": "c1",
-            "x": 0,
-            "y": -222
+            "class": "c1"
         },
         {
             "id": "10",
             "label": "n10",
-            "class": "c1",
-            "x": 435,
-            "y": 69
+            "class": "c1"
         },
         {
             "id": "11",
             "label": "n11",
-            "class": "c1",
-            "x": 23,
-            "y": 10
+            "class": "c1"
         },
         {
             "id": "12",
             "label": "n12",
-            "class": "c1",
-            "x": -129,
-            "y": 39
+            "class": "c1"
         },
         {
             "id": "13",
             "label": "n13",
-            "class": "c2",
-            "x": 234,
-            "y": 843
+            "class": "c2"
         },
         {
             "id": "14",
             "label": "n14",
-            "class": "c2",
-            "x": -301,
-            "y": 129
+            "class": "c2"
         },
         {
             "id": "15",
             "label": "n15",
-            "class": "c2",
-            "x": -20,
-            "y": -76
+            "class": "c2"
         },
         {
             "id": "16",
             "label": "n16",
-            "class": "c2",
-            "x": 1220,
-            "y": -34
+            "class": "c2"
         },
         {
             "id": "17",
             "label": "n17",
-            "class": "c2",
-            "x": -10,
-            "y": 954
+            "class": "c2"
         },
         {
             "id": "18",
             "label": "n18",
-            "class": "c2",
-            "x": 492,
-            "y": 123
+            "class": "c2"
         },
         {
             "id": "19",
             "label": "n19",
-            "class": "c2",
-            "x": 123,
-            "y": -241
+            "class": "c2"
         }
     ],
     "edges": [
