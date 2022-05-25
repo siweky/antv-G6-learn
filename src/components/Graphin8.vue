@@ -53,6 +53,7 @@ export default {
         type: 'delegate',
       });
       const grid = new G6.Grid();
+      const toolbar = new G6.ToolBar();
       this.G6Instance = new G6.Graph({
         container: 'graphin',
         width: 800,
@@ -62,7 +63,7 @@ export default {
         layout: {
           // Object，可选，布局的方法及其配置项，默认为 random 布局。
           type: 'force', // 指定为力导向布局
-          preventOberlap: true, // 防止节点重叠
+          preventOverlap: true, // 防止节点重叠
           // nodeSize: 30        // 节点大小，用于算法中防止节点重叠时的碰撞检测。由于已经在上一节的元素配置中设置了每个节点的 size 属性，则不需要在此设置 nodeSize。
           linkDistance: 100, // 指定边距离为100
         },
@@ -72,6 +73,7 @@ export default {
             'drag-canvas',
             'zoom-canvas',
             'drag-node',
+            'activate-relations',
             {
               type: 'tooltip', // 提示框
               formatText(model) {
@@ -137,7 +139,7 @@ export default {
             stroke: 'steelblue',
           }
         },
-        plugins: [minimap, grid], // 将 minimap 实例配置到图上
+        plugins: [minimap, grid, toolbar], // 将 minimap 实例配置到图上
       });
 
       // 鼠标进入节点
