@@ -132,16 +132,16 @@ export default {
         const nodeItem = e.item; // 获取被点击的节点元素对象
         this.G6Instance.setItemState(nodeItem, 'click', true); // 设置当前节点的 click 状态为 true
 
-        // 点击边
-        this.G6Instance.on('edge:click', (e) => {
-          // 先将所有当前是 click 状态的边置为非 click 状态
-          const clickEdges = this.G6Instance.findAllByState('edge', 'click');
-          clickEdges.forEach((ce) => {
-            this.G6Instance.setItemState(ce, 'click', false);
-          });
-          const edgeItem = e.item; // 获取被点击的边元素对象
-          this.G6Instance.setItemState(edgeItem, 'click', true); // 设置当前边的 click 状态为 true
-        })
+      })
+      // 点击边
+      this.G6Instance.on('edge:click', (e) => {
+        // 先将所有当前是 click 状态的边置为非 click 状态
+        const clickEdges = this.G6Instance.findAllByState('edge', 'click');
+        clickEdges.forEach((ce) => {
+          this.G6Instance.setItemState(ce, 'click', false);
+        });
+        const edgeItem = e.item; // 获取被点击的边元素对象
+        this.G6Instance.setItemState(edgeItem, 'click', true); // 设置当前边的 click 状态为 true
       })
 
       this.render();

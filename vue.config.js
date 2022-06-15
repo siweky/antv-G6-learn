@@ -1,3 +1,17 @@
 module.exports = {
-  transpileDependencies: true
+  transpileDependencies: true,
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'less',
+    }
+  }
+  // css: {
+  //   loaderOptions: {
+  //     less: {
+  //       modifyVars: {
+
+  //       }
+  //     }
+  //   }
+  // }
 }
