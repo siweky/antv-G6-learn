@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Graphin from './components/Graphin11.vue'
+import Graphin from './components/Graphin12.vue'
 
 export default {
   name: 'App',

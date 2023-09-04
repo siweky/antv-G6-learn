@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "appSysName": "应用系统1的名称",
+      "appSysId": "应用系统1的id",
+      "dbNodeList": [
+        {
+          "nodeId": "数据库id",
+          "nodeName": "数据库名称",
+          "edgeColor": "连线的颜色",
+          "edgeLabel": "连线上标记的文本内容",
+          "parentsIds": [
+            "数据库关联的应用系统的id1",
+            "数据库关联的应用系统的id2"
+          ]
+        }
+      ],
+      "personNodeList": [
+        {
+          "nodeId": "人员id",
+          "nodeName": "人员名称",
+          "edgeColor": "连线的颜色",
+          "edgeLabel": "连线上标记的文本内容",
+          "parentsIds": [
+            "人员关联的应用系统的id1",
+            "人员关联的应用系统的id2"
+          ]
+        }
+      ],
+      "platNodeList": [
+        {
+          "nodeId": "平台id",
+          "nodeName": "平台名称",
+          "edgeColor": "连线的颜色",
+          "edgeLabel": "连线上标记的文本内容",
+          "parentsIds": [
+            "平台关联的应用系统的id1",
+            "平台关联的应用系统的id2"
+          ]
+        }
+      ]
+    }
+  ]
+}
