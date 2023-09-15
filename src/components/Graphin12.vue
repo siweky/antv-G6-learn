@@ -82,6 +82,7 @@ export default {
         // className: 'minimap',
         type: 'delegate',
       })
+      console.log('G6 --- ', new G6.Grid())
       // 创建grid实例
       // const grid = new G6.Grid({ img: this.gridImg });
       const grid = new G6.Grid();
@@ -137,13 +138,16 @@ export default {
             }
           }
           if (code === 'optSmallScreen') {
-            this.isFullScreen = false;
+            document.exitFullscreen();
+            // this.isFullScreen = false;
             const { width: o_W, height: o_H } = this.originSize;
             graph.changeSize(o_W, o_H);
             graph.focusItem(this.rootItemId, true, animateCfg);
           }
           if (code === 'optFullScreen') {
-            this.isFullScreen = true;
+            const fullScreenContainer = document.getElementById('graphin-container');
+            fullScreenContainer.requestFullscreen();
+            // this.isFullScreen = true;
             graph.changeSize(full_W, full_H);
             graph.focusItem(this.rootItemId, true, animateCfg);
           }
@@ -469,7 +473,7 @@ export default {
         edge.style.opacity = 0.8;
         const isDanger = remoteData.nodes.find((v) => v.id === edge.source).dangerNode;
         if (edge.apiFlowLine) {
-          edge.size = 2;
+          edge.size = 1;
           edge.style.stroke = '#00CD69';
           edge.style.fill = '#00CD69';
         }
@@ -479,7 +483,7 @@ export default {
           edge.style.fill = '#d0d9e2';
         }
         if (isDanger) {
-          edge.size = 2;
+          edge.size = 1;
           edge.style.stroke = '#EF3E3E';
           edge.style.fill = '#EF3E3E';
         }
@@ -501,7 +505,7 @@ export default {
   width: 70vw;
   height: 70vh;
   position: relative;
-  // background: #ffffff;
+  // background: #f9fafd;
   &.full-screen {
     position: fixed;
     width: 100vw;
